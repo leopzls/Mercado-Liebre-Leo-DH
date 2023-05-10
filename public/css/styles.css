@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  width: 100vw;
+  padding-bottom: 0;
+  border-radius: 5px;
+  background-color: #EAC926;
+}
+
+html {
+  background-color: #666;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px; 
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-style: italic;
+  font-weight: bold;
+}
+
+
+.logo img {
+  height: 60px;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px; 
+}
+
+.precio {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px; 
+}
+
+.descripciones, .descuento {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px; 
+}
+
+.home-image {
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+
+
+header ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header li {
+  position: relative;
+}
+
+header li a {
+  color: #FCFCFCff;
+  display: block;
+  padding: 20px;
+  position: relative;
+  text-decoration: none;
+}
+
+header li:hover>ul {
+  display: block;
+}
+
+header li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+header li ul li {
+  width: 200px;
+}
+
+header li ul li a {
+  background-color: rgb(2, 35, 33);
+  border-bottom: 1px solid #FCFCFCff;
+  color: #FCFCFCff;
+  padding: 15px;
+}
+
+header li ul li:last-child a {
+  border-bottom: none;
+}
+
+header li.services:hover>ul {
+  left: 0;
+}
+
+header li.account:hover>ul {
+  left: auto;
+  right: 0;
+}
+
+.menu-toggle {
+  color: #FCFCFCff;
+  cursor: pointer;
+  font-size: 24px;
+  margin-left: 20px;
+  display: none;
+  padding: 10px;
+  background-color: #1259c3;
+
+}
+
+/* estilo de la barra de busqueda */
+
+.pos-search {
+  min-width: 100px;
+  padding-bottom: 1px;
+  box-shadow: 0 0 7px #111;
+  display: inline-block;
+  border-radius: 30px;
+}
+
+.form button {
+  border: none;
+  background: none;
+  color: #8b8ba7;
+}
+
+/* styling of whole input container */
+.form {
+  --timing: 0.3s;
+  --width-of-input: 200px;
+  --height-of-input: 25px;
+  --border-height: 2px;
+  --input-bg: #fff;
+  --border-radius: 30px;
+  --after-border-radius: 30px;
+  position: relative;
+  width: var(--width-of-input);
+  height: var(--height-of-input);
+  display: flex;
+  align-items: center;
+  padding-inline: 0.8em;
+  border-radius: var(--border-radius);
+  transition: border-radius 0.5s ease;
+  background: var(--input-bg, #fff);
+  margin-bottom: 1px;
+  margin-left: 2px;
+
+
+}
+
+/* styling of Input */
+.input {
+  font-size: 0.8rem;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  padding-inline: 0;
+  padding-block: 0.7em;
+  border: none;
+  min-width: 200px;
+}
+
+/* styling of animated border */
+.form:before {
+  content: "";
+  position: absolute;
+  background: var(--border-color);
+  transform: scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: var(--border-height);
+  left: 0;
+  bottom: 0;
+  border-radius: 1px;
+  transition: transform var(--timing) ease;
+}
+
+/* Hover on Input */
+.form:focus-within {
+  border-radius: var(--after-border-radius);
+}
+
+input:focus {
+  outline: none;
+}
+
+/* here is code of animated border */
+.form:focus-within:before {
+  transform: scale(1);
+}
+
+/* styling of close button */
+.reset {
+  border: none;
+  background: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* close button shown when typing */
+input:not(:placeholder-shown)~.reset {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* sizing svg icons */
+.form svg {
+  width: 17px;
+  margin-top: 3px;
+}
+
+/* FIN estilo de la barra de busqueda */
+
+/* Body */
+
+main {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.cuerpo-pagina {
+  text-align: center;
+  flex-wrap: nowrap;
+}
+
+.foto-producto {
+  width: 90vw;
+  max-width: 500px;
+}
+
+.articulo-1, .articulo-2, .articulo-3, .articulo-4 {
+background-color: whitesmoke;
+box-sizing: border-box;
+
+}
+
+
+
+/* footer */
+.footer {
+  background-color: #ebebeb;
+  padding: 70px 0;
+  font-family: 'Open Sans', sans-serif;
+  padding-bottom: 1px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #000000;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+
+.contactanos {
+  color: rgb(0, 0, 0)
+}
+
+.nuestro-contacto {
+  margin: 15px;
+  margin-left: 30px;
+  font-size: 0.8em;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-bottom: 1px ridge #EAC926;
+
+}
+
+.copyright {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 1em;
+
+}
+
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  header ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #09736Cff;
+    z-index: 999;
+  }
+
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-col h4::before {
+
+    width: 100%
+  }
+}
+
+
+@media(max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+}
